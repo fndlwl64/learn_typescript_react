@@ -1,29 +1,17 @@
 import './App.css';
+import { Status } from './components/Status';
+import { Heading } from './components/Heading';
+import { Oscar } from './components/Oscar';
 import { Greet } from './components/Greet';
-import { Person } from './components/Person';
-import { PersonList } from './components/PersonList';
-
-const names = [
-  {
-    first: 'Bruce',
-    last: 'Wayne'
-  },
-  {
-    first: 'Clark',
-    last: 'Kent'
-  },
-  {
-    first: 'Princess',
-    last: 'Diana'
-  }
-];  
 
 function App() {
   return (
     <div className="App">
-      <Greet name="jjs" messageCount={20} isLoggedIn={false}/>
-      <Person name={{ first: 'jo', last: 'soo' }} />
-      <PersonList names={names} />
+      <Status status='loading' />
+      <Oscar>
+        <Heading>children node : hello world</Heading>
+      </Oscar>
+      <Greet name='Bruce' isLoggedIn={true} />
     </div>
   );
 }
