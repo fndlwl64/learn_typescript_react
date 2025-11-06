@@ -5,4 +5,4 @@ npm start
 ```
 ## 차트
 - [Basic](/Basic.md)
-- [AdvancedProps](/AdvancedProps.md)
+- [Advanced](/Advanced.md)
