@@ -41,3 +41,18 @@ function App() {
   );
 } 
 ```
+### Props Type Tips
+- 타입 재사용 가능
+```typescript
+export type Name = {
+    first: string
+    last: string
+}
+```
+- HTML DOM 이벤트 처리 타입 지정 가능
+```typescript
+type InputProps = {
+  value: string
+  handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+}
+```

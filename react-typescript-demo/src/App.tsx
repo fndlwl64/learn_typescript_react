@@ -1,9 +1,37 @@
+import { useState } from 'react';
 import './App.css';
-import { Container } from './components/Container';
+import { Input } from './components/Input';
+import { PersonList } from './components/PersonList';
+
+const names = [
+  {
+    first: 'Bruce',
+    last: 'Wayne'
+  },
+  {
+    first: 'Clark',
+    last: 'Kent'
+  },
+  {
+    first: 'Princess',
+    last: 'Diana'
+  }
+];  
 
 function App() {
+  
+  const [value, setValue] = useState("Hello, TypeScript!");
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      console.log(event.target.value);
+      setValue(event.target.value);
+  };
+
   return (
-    <Container styles={{ border: '1px solid black', padding: '1rem' }} />
+    <div className="App">
+      <Input value={value} handleChange={handleInputChange} />
+      <PersonList names={names}/>
+    </div>
   );
 }
 
