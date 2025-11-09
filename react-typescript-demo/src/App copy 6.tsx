@@ -1,31 +1,27 @@
 import './App.css';
-import { List } from './components/generics/List';
+import { Greet } from './components/Greet';
+import { PersonList } from './components/PersonList';
 
-const items = [
+const names = [
   {
-    id: 1,
     first: 'Bruce',
     last: 'Wayne'
   },
   {
-    id: 2,
     first: 'Clark',
     last: 'Kent'
   },
   {
-    id: 3,
     first: 'Princess',
     last: 'Diana'
   }
-];
+];  
 
 function App() {
   return (
     <div className="App">
-      <List
-        items={items}
-        onClick={(item) => console.log(item)}
-      />
+      <Greet name="jjs" messageCount={20} isLoggedIn={false}/>
+      <PersonList names={names} />
     </div>
   );
 }
