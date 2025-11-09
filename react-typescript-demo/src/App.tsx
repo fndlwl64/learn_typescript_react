@@ -1,31 +1,10 @@
 import './App.css';
-import { List } from './components/generics/List';
-
-const items = [
-  {
-    id: 1,
-    first: 'Bruce',
-    last: 'Wayne'
-  },
-  {
-    id: 2,
-    first: 'Clark',
-    last: 'Kent'
-  },
-  {
-    id: 3,
-    first: 'Princess',
-    last: 'Diana'
-  }
-];
+import { Toast } from './components/templateliterals/Toast';
 
 function App() {
   return (
     <div className="App">
-      <List
-        items={items}
-        onClick={(item) => console.log(item)}
-      />
+      <Toast position="center-top" />
     </div>
   );
 }
